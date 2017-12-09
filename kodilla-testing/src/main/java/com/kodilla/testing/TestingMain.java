@@ -28,9 +28,9 @@ public class TestingMain {
             System.out.println("Error2");
         }
 
-        Integer adding = calculator.add();
+        int adding = calculator.add();
 
-        if (adding.equals(int a +int b)) {
+        if (adding.equals(15)) {
             System.out.println("test adding OK");
         }else {
             System.out.println("Error adding");
@@ -38,7 +38,7 @@ public class TestingMain {
 
         Integer subtracting = calculator.subtract();
 
-        if (subtracting.equals(int a - int b)) {
+        if (subtracting.equals(-5)) {
             System.out.println("test subtracting OK");
         }else {
             System.out.println("Error subtracting");
