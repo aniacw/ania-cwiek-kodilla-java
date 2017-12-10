@@ -6,10 +6,8 @@ public class Calculator {
     private int a;
     private int b;
 
-    public Calculator(String deviceName, int a, int b){
+    public Calculator(String deviceName){
         this.deviceName = deviceName;
-        this.a = a;
-        this.b = b;
     }
 
     public String getDeviceName(){

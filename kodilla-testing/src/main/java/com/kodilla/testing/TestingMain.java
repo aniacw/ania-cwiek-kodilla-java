@@ -18,7 +18,7 @@ public class TestingMain {
         System.out.println("First unit test: ");
 
 
-        Calculator calculator = new Calculator("Sony Calculator", 5, 10);
+        Calculator calculator = new Calculator("Sony Calculator");
 
         String result2 = calculator.getDeviceName();
 
@@ -28,17 +28,17 @@ public class TestingMain {
             System.out.println("Error2");
         }
 
-        int adding = calculator.add();
+        int adding = calculator.add(5, 10);
 
-        if (adding.equals(15)) {
+        if (adding==15) {
             System.out.println("test adding OK");
         }else {
             System.out.println("Error adding");
         }
 
-        Integer subtracting = calculator.subtract();
+        Integer subtracting = calculator.subtract(5, 10);
 
-        if (subtracting.equals(-5)) {
+        if (subtracting==-5) {
             System.out.println("test subtracting OK");
         }else {
             System.out.println("Error subtracting");
