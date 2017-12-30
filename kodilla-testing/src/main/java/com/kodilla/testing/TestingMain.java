@@ -36,7 +36,7 @@ public class TestingMain {
             System.out.println("Error adding");
         }
 
-        Integer subtracting = calculator.subtract(5, 10);
+        int subtracting = calculator.subtract(5, 10);
 
         if (subtracting==-5) {
             System.out.println("test subtracting OK");
