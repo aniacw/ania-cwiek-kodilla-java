@@ -31,10 +31,11 @@ public class OddNumbersExterminatorTest {
         List<Integer> list = Arrays.asList(2,3,6,8,10);
 
         //when
-        List<Integer> resultLIst = oddNumbersExterminator.exterminate(list);
+        List<Integer> resultList = oddNumbersExterminator.exterminate(list);
 
         //then
-        Assert.assertThat(resultLIst, contains(2,6,8,10));
+        Assert.assertThat(resultList, contains(2,6,8,10));
+        Assert.assertTrue(resultList.size()<=4);
     }
 
     @Test
