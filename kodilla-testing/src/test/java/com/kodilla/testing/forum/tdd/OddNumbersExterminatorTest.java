@@ -35,7 +35,7 @@ public class OddNumbersExterminatorTest {
 
         //then
         Assert.assertThat(resultList, contains(2,6,8,10));
-        Assert.assertTrue(resultList.size()<=4);
+        Assert.assertEquals(4, resultList.size());
     }
 
     @Test
