@@ -38,22 +38,4 @@ public class OddNumbersExterminatorTest {
         Assert.assertEquals(4, resultList.size());
     }
 
-    @Test
-    public void testOddNumbersExterminatorNormalList2() {
-        //give
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        List<Integer> newList = new ArrayList<Integer>();
-        newList.add(50);
-        newList.add(45);
-        newList.add(7);
-        newList.add(3);
-        newList.add(24);
-        newList.add(85);
-
-        //when
-        List<Integer> resultList = oddNumbersExterminator.exterminate(newList);
-
-        //then
-        Assert.assertEquals(50, resultList);
-    }
 }
