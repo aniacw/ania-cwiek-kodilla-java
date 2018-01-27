@@ -4,6 +4,8 @@ import org.junit.*;
 
 import java.util.ArrayList;
 
+import static org.hamcrest.Matchers.contains;
+
 public class ShapeCollectorTestSuite{
 
     private static int testCounter = 0;
@@ -43,19 +45,19 @@ public class ShapeCollectorTestSuite{
         Assert.assertEquals(20.0, result, 0.001);
     }
 
-    /*@Test
+    @Test
     public void testAddFigure(){
         //Given
-        ArrayList<Shape> figures = new ArrayList<>();
+        ShapeCollector shapeCollector = new ShapeCollector();
         Circle circle1 = new Circle("myCircle1", 30);
 
         //When
-        Shape addFigure(circle1);
+        shapeCollector.addFigure(circle1);
 
         //Then
-        Assert.assertTrue(figures.contains(circle1));
+        Assert.assertEquals(1, shapeCollector.getShapesQuantity());
 
-    }*/
+    }
 
 
 

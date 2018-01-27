@@ -8,10 +8,8 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.when;
-/*
+import static org.mockito.Mockito.*;
+
 public class BookDirectoryTestSuite {
 
     private List<Book> generateListOfNBooks(int booksQuantity) {
@@ -84,5 +82,52 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
+
+    @Test
+    public void test0BooksRented(){
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser libraryUser = new LibraryUser("Tom", "Jones", "8888888");
+        List<Book> noneRentedList = generateListOfNBooks(0);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(noneRentedList);
+
+        //When
+        List<Book> resultList = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        //Then
+        assertEquals(0, resultList.size());
+    }
+
+    @Test
+    public void test1BooksRented(){
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser libraryUser = new LibraryUser("Tom", "Jones", "585858");
+        List<Book> oneRentedList = generateListOfNBooks(1);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(oneRentedList);
+
+        //When
+        List<Book> resultList = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        //Then
+        assertEquals(1, resultList.size());
+    }
+
+    @Test
+    public void test5BooksRented(){
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser libraryUser = new LibraryUser("Tom", "Jones", "458574");
+        List<Book> fiveRentedList = generateListOfNBooks(5);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(fiveRentedList);
+
+        //When
+        List<Book> resultList = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        //Then
+        assertEquals(5, resultList.size());
+    }
 }
-*/

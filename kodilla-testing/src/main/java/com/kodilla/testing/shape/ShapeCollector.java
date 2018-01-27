@@ -6,9 +6,9 @@ public class ShapeCollector {
 
     ArrayList<Shape> figures = new ArrayList<Shape>();
 
-    /*public Shape addFigure(Shape circle){
+    public void addFigure(Shape circle){
         figures.add(circle);
-    }*/
+    }
 
     public Shape removeFigure(Shape shape){
         return null;
@@ -20,6 +20,10 @@ public class ShapeCollector {
 
     public Shape showFigures(){
         return null;
+    }
+
+    public int getShapesQuantity(){
+        return figures.size();
     }
 
 }
