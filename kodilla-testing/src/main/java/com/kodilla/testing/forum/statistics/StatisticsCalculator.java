@@ -40,7 +40,11 @@ public class StatisticsCalculator {
 
     public void calculateAdvStatistics(Statistics statistics){
         usersQuantity=statistics.usersNames().size();
-
+        postsQuantity=statistics.postsCount();
+        commentsQuantity=statistics.commentsCount();
+        avPostUser=postsQuantity/usersQuantity;
+        avCommPost=commentsQuantity/postsQuantity;
+        avCommUser=commentsQuantity/postsQuantity;
     }
 
     public void ShowStatistics(){
