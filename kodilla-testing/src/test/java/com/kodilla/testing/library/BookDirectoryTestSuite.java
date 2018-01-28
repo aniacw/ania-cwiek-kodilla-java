@@ -83,7 +83,7 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
-    @Test
+   /* @Test
     public void test0BooksRented(){
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
@@ -129,5 +129,5 @@ public class BookDirectoryTestSuite {
 
         //Then
         assertEquals(5, resultList.size());
-    }
+    }*/
 }
