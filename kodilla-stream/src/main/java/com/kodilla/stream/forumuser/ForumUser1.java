@@ -7,6 +7,18 @@ public final class ForumUser1 {
     private final int userId;
     private final String userName;
     private final char sex;
+
+    @Override
+    public String toString() {
+        return "ForumUser1{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", sex=" + sex +
+                ", dateOfBirth=" + dateOfBirth +
+                ", postPublished=" + postPublished +
+                '}';
+    }
+
     private final LocalDate dateOfBirth;
 
     public int getUserId() {

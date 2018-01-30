@@ -59,6 +59,34 @@ public class ShapeCollectorTestSuite{
 
     }
 
+    @Test
+    public void testRemoveFigure(){
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Square square1 = new Square("mySquare1", 45);
+        shapeCollector.addFigure(square1);
 
+        //When
+        shapeCollector.removeFigure(square1);
 
+        //Then
+        Assert.assertEquals(0, shapeCollector.getShapesQuantity());
+    }
+
+    @Test
+    public void testGetFigure(){
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Triangle triangle1 = new Triangle("myTriangle1", 43);
+        for(int n = 0; n<20; n++){
+            Triangle theTriangle = new Triangle("myTriangle"+n, 43+n);
+            shapeCollector.addFigure(theTriangle);
+        }
+
+        //When
+        Shape result = shapeCollector.getFigure(10);
+
+        //Then
+
+    }
 }

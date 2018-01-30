@@ -14,6 +14,7 @@ import com.kodilla.stream.lambda.Processor;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -72,7 +73,8 @@ public class StreamMain {
 
         Map<String, Book> theResultMapOfBooks = theBookDirectory.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
-                .collect(Collectors.toMap(Book::getSignature, book -> book));
+                //.collect(Collectors.toMap(Book::getSignature, book -> book));
+                .collect(Collectors.toMap(book -> book.getSignature(), book -> book));
 
         System.out.println("# elements: " + theResultMapOfBooks.size());
         theResultMapOfBooks.entrySet().stream()
@@ -93,9 +95,9 @@ public class StreamMain {
         System.out.println();
 
         Forum myForum = new Forum();
-        Map<Integer, ForumUser> theResultListOfUsers = myForum.getUserList().stream()
-                .filter(forumUser1 -> forumUser1.getSex() == 'M')
-                .filter(forumUser1 -> forumUser1.localDate.getYear())
+        Map<Integer, ForumUser1> theResultListOfUsers = myForum.getUserList().stream()
+                .filter(user -> user.getSex() == 'M')
+                .filter(forumUser1 -> forumUser1.getDateOfBirth().isBefore(LocalDate.now().minusYears(20)))
                 .filter(forumUser1 -> forumUser1.getPostPublished() >= 1)
                 .collect(Collectors.toMap(ForumUser1:: getUserId, forumUser1 -> forumUser1));
 
