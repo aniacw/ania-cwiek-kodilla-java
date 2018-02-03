@@ -1,7 +1,7 @@
 package com.kodilla.stream.array;
 
 import java.util.stream.IntStream;
-
+/*
 public final interface ArrayOperations {
 
      static int getAverage(int[] numbers) {
@@ -15,7 +15,7 @@ public final interface ArrayOperations {
 
     }
 
-
+*/
 //    Metoda getAverage(int[] numbers) powinna:
 //        - przy pomocy strumienia IntStream oraz metody range(int startInclusive, int endExclusive)
 //        wyświetlić kolejne elementy tablicy,

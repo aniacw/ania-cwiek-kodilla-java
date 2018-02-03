@@ -4,13 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class World {/*
-
-    private final BigDecimal peopleQuantity;
-
-    public World(BigDecimal peopleQuantity) {
-        this.peopleQuantity = peopleQuantity;
-    }
+public final class World {
 
     private final List<Continent> theContinents = new ArrayList<>();
 
@@ -20,8 +14,8 @@ public final class World {/*
 
     public BigDecimal getPeopleQuantity(){
         return theContinents.stream()
-                .flatMap(continent -> continent.getTheCountries())
+                .flatMap(continent -> continent.getTheCountries().stream())
+                .map(Country:: getPeopleQuantity)  //czy metoda zawsze musi byc static?
                 .reduce(BigDecimal.ZERO, (sum, current) -> sum.add(current));
-    }*/
-
+    }
 }
