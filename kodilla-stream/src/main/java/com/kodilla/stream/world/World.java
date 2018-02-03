@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class World {
+public final class World {/*
 
     private final BigDecimal peopleQuantity;
 
@@ -22,6 +22,6 @@ public final class World {
         return theContinents.stream()
                 .flatMap(continent -> continent.getTheCountries())
                 .reduce(BigDecimal.ZERO, (sum, current) -> sum.add(current));
-    }
+    }*/
 
 }

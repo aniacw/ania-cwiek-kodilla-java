@@ -3,7 +3,7 @@ package com.kodilla.stream.world;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+/*
 public class WorldTestSuite {
 
     @Before
@@ -21,4 +21,4 @@ public class WorldTestSuite {
 
         //Then
     }
-}
+}*/
