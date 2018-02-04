@@ -19,7 +19,7 @@ public class WorldTestSuite {
     @After
     public void afterTest(){
         System.out.println("Test completed");
-    }
+    }/*
 
     @Test
     public void testGetPeopleQuantity(){
@@ -48,5 +48,5 @@ public class WorldTestSuite {
 
         //Then
 
-    }
+    }*/
 }
