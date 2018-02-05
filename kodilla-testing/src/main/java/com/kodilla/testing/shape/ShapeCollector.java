@@ -10,16 +10,16 @@ public class ShapeCollector {
         figures.add(circle);
     }
 
-    public Shape removeFigure(Shape shape){
-        return null;
+    public void removeFigure(Shape square){
+        figures.remove(square);
     }
 
     public Shape getFigure(int n){
-        return null;
+        return figures.get(n);
     }
 
-    public Shape showFigures(){
-        return null;
+    public void showFigures(){
+        System.out.println("The figures: "+figures);
     }
 
     public int getShapesQuantity(){

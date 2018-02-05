@@ -11,12 +11,10 @@ public class Square implements Shape {
     }
 
     public String getShapeName(){
-        //
-        return null;
+        return this.name;
     }
 
     public double getField(){
-        //
-        return 100.0;
+        return this.field;
     }
 }

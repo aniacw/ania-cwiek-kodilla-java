@@ -56,7 +56,6 @@ public class ShapeCollectorTestSuite{
 
         //Then
         Assert.assertEquals(1, shapeCollector.getShapesQuantity());
-
     }
 
     @Test
@@ -78,15 +77,16 @@ public class ShapeCollectorTestSuite{
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Triangle triangle1 = new Triangle("myTriangle1", 43);
-        for(int n = 0; n<20; n++){
-            Triangle theTriangle = new Triangle("myTriangle"+n, 43+n);
-            shapeCollector.addFigure(theTriangle);
-        }
+        Triangle triangle2 = new Triangle("myTriangle2", 57.4);
+        Square square3 = new Square("mySquare3", 74.5);
+        shapeCollector.addFigure(triangle1);
+        shapeCollector.addFigure(triangle2);
+        shapeCollector.addFigure(square3);
 
         //When
-        Shape result = shapeCollector.getFigure(10);
+        Shape result = shapeCollector.getFigure(2);
 
         //Then
-
+        Assert.assertEquals(square3, result);
     }
 }
