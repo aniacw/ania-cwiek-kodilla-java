@@ -10,11 +10,7 @@ public class StatisticsCalculator {
     public double avCommUser;
     public double avCommPost;
 
-    public StatisticsCalculator(int postsCount, int commentsCount, int usersQuantity) {
-        this.postsCount = postsCount;
-        this.commentsCount = commentsCount;
-        this.usersQuantity = usersQuantity;
-    }
+
 
     public Statistics getStatistics() {
         return statistics;

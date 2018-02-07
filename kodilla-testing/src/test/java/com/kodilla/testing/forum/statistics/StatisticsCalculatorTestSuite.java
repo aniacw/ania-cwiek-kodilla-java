@@ -3,7 +3,11 @@ package com.kodilla.testing.forum.statistics;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class StatisticsCalculatorTestSuite {
 
@@ -11,8 +15,9 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfPosts0() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(0, 7, 5);
-
+        StatisticsCalculator calculator = new StatisticsCalculator();
+        List<String> userNamesFalse = new ArrayList<>();
+        when(statisticsMock.postsCount()).thenReturn(10);
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -25,7 +30,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfPosts1000(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(1000, 10, 10);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -38,7 +43,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfComments0(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(100, 20, 5);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -51,7 +56,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfCommentsHigherThanNumberOfPosts() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(200, 400, 5);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -64,7 +69,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfCommentsLowerThanNumberOfPosts() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(200, 40, 5);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -77,7 +82,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfUsers0() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(200, 40, 0);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);
@@ -90,7 +95,7 @@ public class StatisticsCalculatorTestSuite {
     public void testNumberOfUsers100() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-        StatisticsCalculator calculator = new StatisticsCalculator(200, 40, 100);
+        StatisticsCalculator calculator = new StatisticsCalculator();
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);

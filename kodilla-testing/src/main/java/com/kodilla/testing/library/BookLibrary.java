@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BookLibrary {
     LibraryDatabase libraryDatabase;
+    Book book = new Book("Title", "Author", 2000);
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
@@ -18,14 +19,16 @@ public class BookLibrary {
         bookList = resultList;
         return bookList;
     }
-/*
+
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
-        //return libraryDatabase.listBooksInHandsOf(libraryUser);
         List<Book> rentedBooks = libraryDatabase.listBooksInHandsOf(libraryUser);
-        return
+        if(rentABook(libraryUser, book)){
+            rentedBooks.add(book);
+        }
+        return rentedBooks;
+    }
 
-
-
-
-    }*/
+    public boolean rentABook(LibraryUser libraryUser, Book book){
+        return true;
+    }
 }
