@@ -20,6 +20,7 @@ public class FileReader {
         } finally {
             System.out.println("I'm gonna be here... always!");
         }
+
 //
 //        ClassLoader classLoader = getClass().getClassLoader();
 //        File file = new File(classLoader.getResource("file/names.txt").getFile());
