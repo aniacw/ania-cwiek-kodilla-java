@@ -22,9 +22,6 @@ public class BookLibrary {
 
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
         List<Book> rentedBooks = libraryDatabase.listBooksInHandsOf(libraryUser);
-        if(rentABook(libraryUser, book)){
-            rentedBooks.add(book);
-        }
         return rentedBooks;
     }
 

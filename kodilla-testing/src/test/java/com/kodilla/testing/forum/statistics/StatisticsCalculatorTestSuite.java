@@ -57,6 +57,8 @@ public class StatisticsCalculatorTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         StatisticsCalculator calculator = new StatisticsCalculator();
+        when(statisticsMock.postsCount()).thenReturn(10);
+        when(statisticsMock.commentsCount()).thenReturn(20);
 
         //When
         calculator.calculateAdvStatistics(statisticsMock);

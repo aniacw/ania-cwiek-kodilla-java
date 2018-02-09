@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class ArrayOperationsTestSuite {
-/*
+
     @Test
     public void testGetAverage(){
         //Given
@@ -24,5 +24,5 @@ public class ArrayOperationsTestSuite {
         //Then
         int array = IntStream.range(0, numbers.length)
             filter(numbers.get(n))
-    }*/
+    }
 }
