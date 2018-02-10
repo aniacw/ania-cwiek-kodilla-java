@@ -11,6 +11,7 @@ import static org.mockito.Mockito.when;
 
 public class StatisticsCalculatorTestSuite {
 
+
     @Test
     public void testNumberOfPosts0() {
         //Given
@@ -23,7 +24,7 @@ public class StatisticsCalculatorTestSuite {
         calculator.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, calculator.getAvPostUser());
+        Assert.assertEquals(0, calculator.getPostsCount());
     }
 
     @Test

@@ -2,14 +2,17 @@ package com.kodilla.stream.array;
 
 import java.util.stream.IntStream;
 
-public final interface ArrayOperations {
+public interface ArrayOperations {
 
-     static int getAverage(int[] numbers) {
-         int array[] = IntStream.range(0, numbers.length)
-                 .filter(n -> numbers[]);
-         double array2 = IntStream.range(0, array.length)
-                 .map(numbers[i] ->  )
-                 .average();
+     static double getAverage(int[] numbers) {
+        IntStream.range(0, numbers.length)
+                 .map(n -> numbers[n])
+                 .forEach(System.out::println);
+
+         double aver = IntStream.range(0, numbers.length)
+                 .map(n -> numbers[n] )
+                 .average().getAsDouble();
+         return aver;
 
      }
 
